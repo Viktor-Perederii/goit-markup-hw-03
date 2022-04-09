@@ -10,23 +10,59 @@
 	--font-cl-sc: #757575;
 	--add-bckg-cl: #2f303a;
 	--add-bckg-btn: #f5f4fa;
+	--portfolio-line: #ececec;
 }
-/*
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
 	margin: 0;
-	padding: 0; 
-}*/
+}
 
 body {
 	font-family: Roboto, sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	color: var(--font-cl-sc);
+
+	margin: 0;
 }
 ul {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
+
+.container {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+	outline: 1px solid tomato;
+}
+
+.header,
+.nav {
+	display: flex;
+	align-items: center;
+}
+
 .link {
 	text-decoration: none;
+}
+.link.active {
+	color: var(--accent-hover);
 }
 .visually-hidden {
 	position: absolute;
@@ -43,7 +79,20 @@ ul {
 /* site nav */
 .page-header {
 	background-color: var(--bg-cl-com);
+	padding-top: 24px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid var(--portfolio-line);
 }
+/* .nav, */
+.nav-list {
+	display: flex;
+	margin-left: 93px;
+}
+.nav-list .nav-item:not(:last-child) {
+	outline: 1px solid red;
+	margin-right: 50px;
+}
+
 .nav-list a {
 	color: var(--font-cl-com);
 	font-style: normal;
@@ -55,6 +104,14 @@ ul {
 .nav-list :focus {
 	color: var(--accent-hover);
 }
+.contacts {
+	display: flex;
+	margin-left: auto;
+}
+.contacts .contact-item:not(:last-child) {
+	margin-right: 50px;
+}
+
 .contacts a {
 	color: var(--font-cl-sc);
 	font-size: 14px;
@@ -80,9 +137,11 @@ ul {
 	line-height: 1.19;
 	color: var(--accent-hover);
 }
+
 /* hero */
 .hero {
 	background-color: var(--add-bckg-cl);
+	text-align: center;
 }
 .hero-header {
 	font-style: normal;
@@ -101,6 +160,9 @@ ul {
 	font-size: 16px;
 	line-height: 1.88;
 	cursor: pointer;
+
+	margin-top: 40px;
+	min-width: 200px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -109,15 +171,23 @@ ul {
 	border-radius: 4px;
 }
 /*  section 1 benefits/we-do*/
-.benefits,
-.we-do {
+
+.benefits {
 	background-color: var(--bg-cl-com);
+	padding-top: 94px;
 }
 .benefits-list {
+	display: flex;
+	justify-content: space-between;
+
+	width: 1170px;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.71;
-	letter-spacing: 0.06em;
+	letter-spacing: 0.03em;
+}
+.benefits-item {
+	width: 270px;
 }
 .benefits-header {
 	text-transform: uppercase;
@@ -126,9 +196,22 @@ ul {
 }
 .benefits-text {
 	font-size: inherit;
+	margin-top: 10px;
 }
+.we-do {
+	background-color: var(--bg-cl-com);
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+.we-do-list {
+	display: flex;
+	justify-content: space-between;
+}
+
 .we-do-header,
 .team-header {
+	padding-bottom: 50px;
+
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.16;
@@ -139,17 +222,27 @@ ul {
 /*  section 2 team */
 .team {
 	background-color: var(--add-bckg-btn);
+	padding-top: 94px;
+	padding-bottom: 94px;
 }
 .team-unit {
 	background-color: var(--bg-cl-com);
 }
 .team-header {
+	padding-bottom: 50px;
+
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.17;
 	color: var(--font-cl-com);
 }
+.team-list {
+	display: flex;
+	justify-content: space-between;
+}
 .team-person {
+	padding-top: 30px;
+
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.18;
@@ -157,6 +250,9 @@ ul {
 	color: var(--font-cl-com);
 }
 .team-position {
+	padding-top: 10px;
+	padding-bottom: 30px;
+
 	font-size: 16px;
 	line-height: 1.18;
 	text-align: center;
@@ -164,6 +260,9 @@ ul {
 /*  footer */
 .page-footer {
 	background-color: var(--add-bckg-cl);
+
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .page-footer .logo {
 	color: var(--bg-cl-com);
@@ -174,6 +273,7 @@ ul {
 	font-size: 14px;
 	line-height: 1.71;
 	color: var(--bg-cl-com);
+	padding-top: 20px;
 }
 .footer-contact a {
 	font-style: normal;
@@ -181,11 +281,22 @@ ul {
 	font-size: 14px;
 	line-height: 1.71;
 	color: rgba(255, 255, 255, 0.6);
+
+	padding-top: 9px;
 }
 
 /* portfolio button */
 .portfolio {
 	background-color: var(--bg-cl-com);
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+.filter {
+	display: flex;
+	outline: 1px solid red;
+
+	padding-bottom: 50px;
+	justify-content: center;
 }
 
 .btn {
@@ -204,6 +315,18 @@ ul {
 .filter-btn :focus {
 	background-color: var(--accent-hover);
 	color: var(--bg-cl-com);
+}
+
+.filter-btn:not(:first-child) {
+	margin-left: 8px;
+}
+.portfolio-projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.portfolio-projects .project-item {
+	margin-bottom: 30px;
 }
 .project-name {
 	font-weight: 700;

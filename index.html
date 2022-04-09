@@ -11,169 +11,190 @@
 			rel="stylesheet"
 		/>
 		<title>WebStudio</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+			integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="./css/styles.css" />
 	</head>
 	<body>
 		<header class="page-header">
-			<nav class="nav">
-				<a href="/" class="logo link">
-					<span class="logo-web"> Web</span>Studio
-				</a>
-				<ul class="nav-list">
-					<li class="nav-item">
-						<a href="./index.html" class="link">Студия</a>
-					</li>
-					<li class="nav-item">
-						<a href="./portfolio.html" class="link">Портфолио</a>
-					</li>
-					<li class="nav-item"><a href="" class="link">Контакты</a></li>
-				</ul>
-			</nav>
-			<ul class="contacts">
-				<li class="contact-item">
-					<a href="mailto:info@devstudio.com" class="link"
-						>info@devstudio.com</a
-					>
-				</li>
-				<li class="contact-item">
-					<a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
-				</li>
-			</ul>
-		</header>
-		<main class="page-body">
-			<!-- Section 1 -->
-			<section class="hero">
-				<h1 class="hero-header">Эффективные решения для вашего бизнеса</h1>
-				<button class="hero-btn" type="button">Заказать услугу</button>
-			</section>
-			<!-- Section 2 -->
-			<section class="benefits">
-				<h2 class="visually-hidden">Нашы преимущества</h2>
-				<ul class="benefits-list">
-					<li class="benefits-item">
-						<h3 class="benefits-header">Внимание к деталям</h3>
-						<p class="benefits-text">
-							Идейные соображения, а также начало повседневной работы по
-							формированию позиции.
-						</p>
-					</li>
-					<li class="benefits-item">
-						<h3 class="benefits-header">Пунктуальность</h3>
-						<p class="benefits-text">
-							Задача организации, в особенности же рамки и место обучения кадров
-							влечет за собой.
-						</p>
-					</li>
-					<li class="benefits-item">
-						<h3 class="benefits-header">Планирование</h3>
-						<p class="benefits-text">
-							Равным образом консультация с широким активом в значительной
-							степени обуславливает.
-						</p>
-					</li>
-					<li class="benefits-item">
-						<h3 class="benefits-header">Современные технологии</h3>
-						<p class="benefits-text">
-							Значимость этих проблем настолько очевидна, что реализация
-							плановых заданий.
-						</p>
-					</li>
-				</ul>
-			</section>
-			<section class="we-do">
-				<h2 class="we-do-header">Чем мы занимаемся</h2>
-				<ul class="we-do-list">
-					<li class="we-do-item">
-						<img
-							src="./images/gallery/image-1.jpg"
-							alt="working process"
-							width="370"
-							height="294"
-						/>
-					</li>
-					<li class="we-do-item">
-						<img
-							src="./images/gallery/image-2.jpg"
-							alt="working process"
-							width="370"
-							height="294"
-						/>
-					</li>
-					<li class="we-do-item">
-						<img
-							src="./images/gallery/image-3.jpg"
-							alt="working process"
-							width="370"
-							height="294"
-						/>
-					</li>
-				</ul>
-			</section>
-			<!-- Section 3 -->
-			<section class="team">
-				<h2 class="team-header">Наша команда</h2>
-				<ul class="team-list">
-					<li class="team-unit">
-						<img
-							src="./images/team/product-designer.jpg"
-							alt="Игорь Демьяненко"
-							width="270"
-							height="260"
-						/>
-						<h3 class="team-person">Игорь Демьяненко</h3>
-						<p class="team-position">Product Designer</p>
-					</li>
-					<li class="team-unit">
-						<img
-							src="./images/team/frontend-dvp.jpg"
-							alt="Ольга Репина"
-							width="270"
-							height="260"
-						/>
-						<h3 class="team-person">Ольга Репина</h3>
-						<p class="team-position">Frontend Developer</p>
-					</li>
-					<li class="team-unit">
-						<img
-							src="./images/team/marketing.jpg"
-							alt="Николай Тарасов"
-							width="270"
-							height="260"
-						/>
-						<h3 class="team-person">Николай Тарасов</h3>
-						<p class="team-position">Marketing</p>
-					</li>
-					<li class="team-unit">
-						<img
-							src="./images/team/UI-designer.jpg"
-							alt="Михаил Ермаков"
-							width="270"
-							height="260"
-						/>
-						<h3 class="team-person">Михаил Ермаков</h3>
-						<p class="team-position">UI Designer</p>
-					</li>
-				</ul>
-			</section>
-		</main>
-		<!--Footer-->
-		<footer class="page-footer">
-			<a href="/" class="logo link">
-				<span class="logo-web"> Web</span>Studio
-			</a>
-			<address class="studio-contacts">
-				<ul class="contacts-details">
-					<li class="adress">г. Киев, пр-т Леси Украинки, 26</li>
-					<li class="footer-contact">
+			<div class="container header">
+				<nav class="nav">
+					<a href="/" class="logo link">
+						<span class="logo-web"> Web</span>Studio
+					</a>
+					<ul class="nav-list">
+						<li class="nav-item">
+							<a href="./index.html" class="link active">Студия</a>
+						</li>
+						<li class="nav-item">
+							<a href="./portfolio.html" class="link">Портфолио</a>
+						</li>
+						<li class="nav-item"><a href="" class="link">Контакты</a></li>
+					</ul>
+				</nav>
+				<ul class="contacts">
+					<li class="contact-item">
 						<a href="mailto:info@devstudio.com" class="link"
 							>info@devstudio.com</a
 						>
 					</li>
-					<li class="footer-contact">
+					<li class="contact-item">
 						<a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
 					</li>
 				</ul>
-			</address>
+			</div>
+		</header>
+		<main class="page-body">
+			<!-- Section 1 -->
+			<section class="hero">
+				<div class="container">
+					<h1 class="hero-header">
+						Эффективные решения <br />для вашего бизнеса
+					</h1>
+					<button class="hero-btn" type="button">Заказать услугу</button>
+				</div>
+			</section>
+			<!-- Section 2 -->
+			<section class="benefits">
+				<div class="container">
+					<h2 class="visually-hidden">Нашы преимущества</h2>
+					<ul class="benefits-list">
+						<li class="benefits-item">
+							<h3 class="benefits-header">Внимание к деталям</h3>
+							<p class="benefits-text">
+								Идейные соображения, а также начало повседневной работы по
+								формированию позиции.
+							</p>
+						</li>
+						<li class="benefits-item">
+							<h3 class="benefits-header">Пунктуальность</h3>
+							<p class="benefits-text">
+								Задача организации, в особенности же рамки и место обучения
+								кадров влечет за собой.
+							</p>
+						</li>
+						<li class="benefits-item">
+							<h3 class="benefits-header">Планирование</h3>
+							<p class="benefits-text">
+								Равным образом консультация с широким активом в значительной
+								степени обуславливает.
+							</p>
+						</li>
+						<li class="benefits-item">
+							<h3 class="benefits-header">Современные технологии</h3>
+							<p class="benefits-text">
+								Значимость этих проблем настолько очевидна, что реализация
+								плановых заданий.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="we-do">
+				<div class="container">
+					<h2 class="we-do-header">Чем мы занимаемся</h2>
+					<ul class="we-do-list">
+						<li class="we-do-item">
+							<img
+								src="./images/gallery/image-1.jpg"
+								alt="working process"
+								width="370"
+								height="294"
+							/>
+						</li>
+						<li class="we-do-item">
+							<img
+								src="./images/gallery/image-2.jpg"
+								alt="working process"
+								width="370"
+								height="294"
+							/>
+						</li>
+						<li class="we-do-item">
+							<img
+								src="./images/gallery/image-3.jpg"
+								alt="working process"
+								width="370"
+								height="294"
+							/>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Section 3 -->
+			<section class="team">
+				<div class="container">
+					<h2 class="team-header">Наша команда</h2>
+					<ul class="team-list">
+						<li class="team-unit">
+							<img
+								src="./images/team/product-designer.jpg"
+								alt="Игорь Демьяненко"
+								width="270"
+								height="260"
+							/>
+							<h3 class="team-person">Игорь Демьяненко</h3>
+							<p class="team-position">Product Designer</p>
+						</li>
+						<li class="team-unit">
+							<img
+								src="./images/team/frontend-dvp.jpg"
+								alt="Ольга Репина"
+								width="270"
+								height="260"
+							/>
+							<h3 class="team-person">Ольга Репина</h3>
+							<p class="team-position">Frontend Developer</p>
+						</li>
+						<li class="team-unit">
+							<img
+								src="./images/team/marketing.jpg"
+								alt="Николай Тарасов"
+								width="270"
+								height="260"
+							/>
+							<h3 class="team-person">Николай Тарасов</h3>
+							<p class="team-position">Marketing</p>
+						</li>
+						<li class="team-unit">
+							<img
+								src="./images/team/UI-designer.jpg"
+								alt="Михаил Ермаков"
+								width="270"
+								height="260"
+							/>
+							<h3 class="team-person">Михаил Ермаков</h3>
+							<p class="team-position">UI Designer</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<!--Footer-->
+		<footer class="page-footer">
+			<div class="container">
+				<a href="/" class="logo link">
+					<span class="logo-web"> Web</span>Studio
+				</a>
+				<address class="studio-contacts">
+					<ul class="contacts-details">
+						<li class="adress">г. Киев, пр-т Леси Украинки, 26</li>
+						<li class="footer-contact">
+							<a href="mailto:info@devstudio.com" class="link"
+								>info@devstudio.com</a
+							>
+						</li>
+						<li class="footer-contact">
+							<a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+						</li>
+					</ul>
+				</address>
+			</div>
 		</footer>
 	</body>
 </html>
