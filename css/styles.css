@@ -29,7 +29,11 @@ h4,
 h5 {
 	margin: 0;
 }
-
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
 body {
 	font-family: Roboto, sans-serif;
 	font-weight: 400;
@@ -142,6 +146,9 @@ ul {
 .hero {
 	background-color: var(--add-bckg-cl);
 	text-align: center;
+
+	padding-top: 200px;
+	padding-bottom: 200px;
 }
 .hero-header {
 	font-style: normal;
@@ -308,7 +315,9 @@ ul {
 	padding-bottom: 50px;
 	justify-content: center;
 }
-
+.filter-btn:not(:first-child) {
+	margin-left: 8px;
+}
 .btn {
 	border: none;
 	font-size: 16px;
@@ -327,8 +336,13 @@ ul {
 	color: var(--bg-cl-com);
 }
 
-.filter-btn:not(:first-child) {
-	margin-left: 8px;
+.project-item {
+	width: calc((100% - 60px) / 3);
+}
+.proj-text-cover {
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
 }
 .portfolio-projects {
 	display: flex;
@@ -351,9 +365,13 @@ ul {
 	line-height: 2;
 	letter-spacing: 0.06em;
 	color: var(--font-cl-com);
+
+	padding-left: 24px;
 }
 .project-text {
 	font-size: 16px;
 	line-height: 1.88;
 	color: var(--font-cl-sc);
+
+	padding-left: 24px;
 }
