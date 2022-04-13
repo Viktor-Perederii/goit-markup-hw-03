@@ -84,7 +84,7 @@ ul {
 .page-header {
 	background-color: var(--bg-cl-com);
 	padding-top: 24px;
-	padding-bottom: 25px;
+	padding-bottom: 24px;
 	border-bottom: 1px solid var(--portfolio-line);
 }
 /* .nav, */
@@ -166,22 +166,31 @@ ul {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.88;
+	letter-spacing: 0.06em;
 	cursor: pointer;
 
 	margin-top: 40px;
 	min-width: 200px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	padding: 10px 32px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
-	background-color: #188ce8;
+	background: #188ce8;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 }
+
 /*  section 1 benefits/we-do*/
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
 
 .benefits {
 	background-color: var(--bg-cl-com);
-	padding-top: 94px;
+	padding-bottom: 0;
 }
 .benefits-list {
 	display: flex;
@@ -208,9 +217,8 @@ ul {
 }
 .we-do {
 	background-color: var(--bg-cl-com);
-	padding-top: 94px;
-	padding-bottom: 94px;
 }
+
 .we-do-list {
 	display: flex;
 }
@@ -221,9 +229,8 @@ ul {
 
 .we-do-header,
 .team-header {
-	padding-bottom: 50px;
+	margin-bottom: 50px;
 
-	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.16;
 	text-align: center;
@@ -233,8 +240,6 @@ ul {
 /*  section 2 team */
 .team {
 	background-color: var(--add-bckg-btn);
-	padding-top: 94px;
-	padding-bottom: 94px;
 }
 .team-unit {
 	background-color: var(--bg-cl-com);
@@ -245,9 +250,13 @@ ul {
 .team-unit:not(:nth-child(4n)) {
 	margin-right: 30px;
 }
-.team-header {
-	padding-bottom: 50px;
+.team-description {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
 
+.team-header {
+	margin-bottom: 50px;
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.17;
@@ -258,8 +267,6 @@ ul {
 }
 
 .team-person {
-	padding-top: 30px;
-
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.18;
@@ -267,8 +274,7 @@ ul {
 	color: var(--font-cl-com);
 }
 .team-position {
-	padding-top: 10px;
-	padding-bottom: 30px;
+	margin-top: 10px;
 
 	font-size: 16px;
 	line-height: 1.18;
@@ -284,22 +290,24 @@ ul {
 .page-footer .logo {
 	color: var(--bg-cl-com);
 }
-.adress {
+.studio-contacts {
 	font-style: normal;
+	margin-top: 20px;
+}
+.adress a {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.71;
 	color: var(--bg-cl-com);
-	padding-top: 20px;
+}
+.footer-contact {
+	margin-top: 9px;
 }
 .footer-contact a {
-	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.71;
 	color: rgba(255, 255, 255, 0.6);
-
-	padding-top: 9px;
 }
 
 /* portfolio button */
@@ -312,7 +320,7 @@ ul {
 	display: flex;
 	/* outline: 1px solid red; */
 
-	padding-bottom: 50px;
+	margin-bottom: 50px;
 	justify-content: center;
 }
 .filter-btn:not(:first-child) {
@@ -322,12 +330,16 @@ ul {
 	border: none;
 	font-size: 16px;
 	line-height: 1.62;
+	font-weight: 500;
+	letter-spacing: 0.03em;
 	text-align: center;
 	color: var(--font-cl-com);
 	background-color: var(--add-bckg-btn);
 	border-radius: 4px;
-	font-weight: 500;
+
 	cursor: pointer;
+
+	padding: 6px 22px;
 }
 
 .filter-btn :hover,
@@ -337,12 +349,13 @@ ul {
 }
 
 .project-item {
-	width: calc((100% - 60px) / 3);
+	flex-basis: calc((100% - 60px) / 3);
 }
 .proj-text-cover {
 	border-left: 1px solid #eeeeee;
 	border-right: 1px solid #eeeeee;
 	border-bottom: 1px solid #eeeeee;
+	padding: 20px 24px;
 }
 .portfolio-projects {
 	display: flex;
@@ -365,13 +378,9 @@ ul {
 	line-height: 2;
 	letter-spacing: 0.06em;
 	color: var(--font-cl-com);
-
-	padding-left: 24px;
 }
 .project-text {
 	font-size: 16px;
 	line-height: 1.88;
 	color: var(--font-cl-sc);
-
-	padding-left: 24px;
 }
